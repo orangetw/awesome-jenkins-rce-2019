@@ -3,6 +3,8 @@
 # author: Orange Tsai(@orange_8361)
 # 
 
+from __future__ import print_function
+
 import sys
 import requests
 from enum import Enum
@@ -24,16 +26,16 @@ class mode(Enum):
     ENTRY_NOTFOUND = 999
 
 def usage():
-    print '''
+    print('''
   Usage:
     python exp.py <url> <cmd>
-    '''
+    ''')
 
 def _log(msg, fail=False):
     nb = '[*]'
     if fail:
         nb = '[-]'
-    print '%s %s' % (nb, msg)
+    print('%s %s' % (nb, msg))
 
 def _get(url, params=None):
     r = requests.get(url, verify=False, params=params)
