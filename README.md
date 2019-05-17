@@ -43,7 +43,7 @@ $ python exp.py http://jenkins/ 'curl orange.tw'
 * Script Security Plugin 1.48
 
 
-# Acknoledgements
+# Acknowledgements
 
 * [@orange_8361](https://twitter.com/orange_8361) for CVE-2018-1000861
 * [@0ang3el](https://twitter.com/0ang3el) for CVE-2019-1003005
